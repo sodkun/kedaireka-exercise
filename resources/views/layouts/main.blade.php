@@ -7,10 +7,10 @@
     <title>{{ $title }}</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Round">
     <link rel="stylesheet" href="{{ '/css/style.css' }}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="{{asset('assets/bs/css/bootstrap.min.css')}}" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 <body>
-  <div class="d-flex">
+<div class="d-flex">
     <div id="sidebar-open bg-light" class="s"> 
         <div class="d-flex flex-column flex-shrink-0 p-3 bg-light sidebar-item">
             <a href="/home" class="d-flex align-items-center justify-content-center p-3 my-3 mx-3 text-decoration-none bg-primary rounded" id="logo">
@@ -28,6 +28,12 @@
                 <a href="/tipe" class="d-flex nav-link p-3 align-items-center {{ ($title === 'Tipe Film') ? 'active' : '' }}">
                   <i class="material-icons-round bi me-4">precision_manufacturing</i>
                   <span class="text">Tipe Film</span>
+                </a>
+              </li>
+              <li>
+                <a href="/pengiriman" class="d-flex nav-link p-3 align-items-center {{ ($title === 'Pengiriman') ? 'active' : '' }}">
+                  <i class="material-icons-round bi me-4">precision_manufacturing</i>
+                  <span class="text">Pengiriman</span>
                 </a>
               </li>
             </ul>
@@ -78,8 +84,8 @@
       </div>
     </div>  
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>  
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="{{asset('assets/jquery.min.js')}}"></script>  
+<script src="{{asset('assets/bs/js/bootstrap.bundle.min.js')}}" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 <script>
   $("#burger-menu").click(function(){
     $(".s").toggleClass("close",[3]);
